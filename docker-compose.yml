@@ -1,0 +1,14 @@
+version: "3.9"
+
+services:
+  user-service:
+    build: .
+    container_name: user-service
+    ports:
+      - "8081:8081"
+    environment:
+      - NODE_ENV=production
+      - MONGO_URI=mongodb+srv://kegzpeach:hlHe8HN2m8TgOB1F@tangomanagement.ngouqxc.mongodb.net/tcms_user
+      - JWT_SECRET=super_secret_key
+      - ADMIN_EMAIL=admin@tcms.local
+      - ADMIN_PASSWORD=ChangeMe123!
